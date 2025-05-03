@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div
-      className="w-full min-h-screen"
+      className="w-full min-h-screen relative overflow-hidden"
       style={{ backgroundImage: "url('/bg.jpg')" }}
     >
       <div className="absolute inset-0 bg-black opacity-60" />
@@ -53,7 +53,7 @@ export default function Home() {
             exit={{ opacity: 0, scale: 0.8 }} // Ganti scale: 0.5 untuk efek mengecil
             transition={{ duration: 0.6 }}
           >
-            <div className="min-w-xl flex justify-center items-center bg-white rounded-lg">
+            <div className="w-11/12 sm:w-8/12 md:w-6/12 lg:w-4/12 flex justify-center items-center bg-white rounded-lg">
               <div className="text-center text-gray-900/80 font-semibold p-8 w-full flex justify-center items-center flex-col">
                 <Image
                   src="/stiker1.gif"

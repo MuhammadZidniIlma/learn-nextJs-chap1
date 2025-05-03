@@ -64,7 +64,7 @@ export default function Alert({ name }: AlertProps) {
   };
 
   return (
-    <div className="relative z-10 flex flex-col items-center pt-36  h-full gap-6 min-h-screen">
+    <div className="relative z-10 flex flex-col items-center pt-36  h-full gap-6 min-h-screen overflow-hidden">
         <div className="p-4 bg-gray-200/30 mt-10 rounded-full shadow-lg w-28 h-28 flex items-center justify-center">
             <Image
               src={gifList[gifIndex]} // 🟢 GIF berganti otomatis
@@ -76,15 +76,15 @@ export default function Alert({ name }: AlertProps) {
           </div>
       <AnimatePresence>
         <motion.div
-          className="min-w-2xl h-44 relative bg-gray-900/60 rounded-lg shadow-lg flex items-center justify-center border border-white flex-col"
+          className="w-11/12 sm:w-8/12 lg:w-1/2 h-44 relative bg-gray-900/60 rounded-lg shadow-lg flex items-center justify-center border border-white flex-col"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.6 }}
         >          
           <div className="text-center text-white text-2xl font-bold">
-            <h1 className="text-xl capitalize">Hallo {name} 😊</h1>
-            <p className="mt-4 text-xl font-extralight">{displayText}</p>
+            <h1 className="text-base md:text-xl capitalize">Hallo {name} 😊</h1>
+            <p className="mt-4 text-lg md:text-xl font-extralight">{displayText}</p>
           </div>
           <div className="flex justify-end  w-full p-2 absolute bottom-0 right-0">
             {showTombol && (
